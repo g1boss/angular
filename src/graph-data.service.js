@@ -13,7 +13,8 @@
     graph.data.nodes = [];
     graph.data.links = [];
 
-    graph.getData = function () {
+    graph.getData = function (params) {
+      console.log(params);
       graph.data.nodes = [
           {"name":"Myriel","group":1},
           {"name":"Napoleon","group":1},

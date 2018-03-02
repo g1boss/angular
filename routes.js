@@ -23,9 +23,15 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   url: '/graph',
     templateUrl: 'src/templates/graph.template.html',
     controller: 'NetworkGraphController as graphCtrl',
+    params: {
+      queryParams: {
+        "query": "",
+        "bannerMessage": "QUERY DEFAULT MESSAGE"
+      }
+    },
     resolve: {
-      graphData: ['GraphDataService', function (GraphDataService) {
-        return GraphDataService.getData();
+      graphData: ['GraphDataService', '$stateParams', function (GraphDataService, $stateParams) {
+        return GraphDataService.getData($stateParams);
       }]
     }
   })
