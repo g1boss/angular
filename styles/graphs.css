@@ -1,0 +1,17 @@
+body {
+     padding-top:0px;
+     margin-top: 0px;
+}
+.page-header {
+  margin:0px;
+  padding:0px;
+}
+network-graph {
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+.node {
+  stroke-width: 1.5px;
+}

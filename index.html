@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/nv.d3.css">
+  <link rel="stylesheet" href="styles/graphs.css">
+  <link rel="stylesheet" href="styles/banner.css">
+
+  <!--link rel="stylesheet" href="styles/ui-grid.css"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/d3.js"></script>
+  <script src="lib/nv.d3.js"></script>
+  <script src="lib/angular-nvd3.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="src/graph-data.service.js"></script>
+  <script src="src/network-graph.controller.js"></script>
+  <script src="routes.js"></script>
+
+  <title>Sample Graph</title>
+</head>
+<body ng-app="GraphApp">
+  <div id="banner-header" class="page-header">QUERY PARAMETERS</div>
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+  <div id="banner-header" class="page footer">QUERY PARAMETERS</div>
+</body>
