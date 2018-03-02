@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="col-md-4">
+    <fieldset>
+      <form class='form-group' name='queryForm' novalidate>
+        <input class="form-control" name='query' type='text' placeholder='query string'
+          ng-model="queryCtlr.query.queryString"
+          required
+          minlength="2"
+          maxlength="32">
+          <span
+            ng-if="(queryForm.query.$error.minlength || queryForm.query.$error.required) && queryForm.query.$touched">
+            First name must be at least 2 characters long
+          </span>
+          <span ng-if="queryForm.query.$error.maxlength && queryForm.query.$touched">
+            First name must not be longer than 32 characters
+          </span>
+          <br>
+
+        <input class="form-control" name='bannerMsg' type='text' placeholder='banner message'
+          ng-model="queryCtlr.query.bannerMesg"
+          required
+          minlength="2"
+          maxlength="32">
+          <span
+            ng-if="(queryForm.bannerMsg.$error.minlength || queryForm.bannerMsg.$error.required) && queryForm.bannerMsg.$touched">
+            First name must be at least 2 characters long
+          </span>
+          <span ng-if="queryForm.bannerMsg.$error.maxlength && queryForm.bannerMsg.$touched">
+            First name must not be longer than 32 characters
+          </span>
+          <br>
+
+        <button class="btn btn-success"
+          ng-disabled="queryForm.$invalid"
+          ng-click="queryCtlr.doQuery(queryCtlr.query);">Submit</button>
+          <br><br><span ng-if="queryCtlr.$valid && !queryCtlr.$dirty">
+            {{queryCtlr.savedMessage}}
+        </span>
+      </form>
+    </fieldset>
+  </div>
+</div>

@@ -29,6 +29,12 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       }]
     }
   })
+  .state('query', {
+  url: '/query',
+  templateUrl: 'src/templates/queryform.html',
+  controller: 'QueryController',
+  controllerAs: 'queryCtlr'
+  })
 
 };
 

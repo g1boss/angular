@@ -15,16 +15,18 @@
   <script src="lib/angular-ui-router.min.js"></script>
 
   <script src="app.js"></script>
+  <script src="src/graph-app.controller.js"></script>
+  <script src="src/query.controller.js"></script>
   <script src="src/graph-data.service.js"></script>
   <script src="src/network-graph.controller.js"></script>
   <script src="routes.js"></script>
 
   <title>Sample Graph</title>
 </head>
-<body ng-app="GraphApp">
-  <div id="banner-header" class="page-header">QUERY PARAMETERS</div>
+<body ng-app="GraphApp" ng-controller="GraphAppController">
+  <div id="banner-header" class="page-header">{{bannerMessage}}</div>
   <div class="container">
     <ui-view></ui-view>
   </div>
-  <div id="banner-header" class="page footer">QUERY PARAMETERS</div>
+  <div id="banner-header" class="page footer">{{bannerMessage}}</div>
 </body>
